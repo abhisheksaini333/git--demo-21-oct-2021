@@ -28,4 +28,10 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('angular-testing-demo app is running!');
   });
+
+  it('addition of two numbers', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.sum(23, 12)).toEqual(35);
+  })
 });
